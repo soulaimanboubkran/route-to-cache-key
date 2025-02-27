@@ -6,16 +6,16 @@ A utility for Deno that converts URL routes into cache-friendly keys, handling p
 
 ```bash
 # Import from JSR
-import { routeToCacheKey } from "jsr:@yourusername/route-to-cache-key";
+import { routeToCacheKey } from "jsr:@soul/route-to-cache-key";
 
 # or import from GitHub (alternative)
-import { routeToCacheKey } from "https://raw.githubusercontent.com/yourusername/route-to-cache-key/main/mod.ts";
+import { routeToCacheKey } from "https://github.com/soulaimanboubkran/route-to-cache-key/blob/main/mod.ts";
 ```
 
 ## Usage
 
 ```typescript
-import { routeToCacheKey } from "@yourusername/route-to-cache-key";
+import { routeToCacheKey } from "@soul/route-to-cache-key";
 
 // Basic routes
 routeToCacheKey("/user/1234");         // Returns: "user_1234"

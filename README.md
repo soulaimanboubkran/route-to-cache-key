@@ -5,6 +5,20 @@ A utility for Deno that converts URL routes into cache-friendly keys, handling p
 ## Installation
 
 ```bash
+# Using npx
+npx jsr add @soul/route-to-cache-key
+
+# Using Deno
+deno add jsr:@soul/route-to-cache-key
+
+# Using Yarn
+yarn dlx jsr add @soul/route-to-cache-key
+
+```
+
+```bash
+# Import 
+import { routeToCacheKey } from "@soul/route-to-cache-key";
 # Import from JSR
 import { routeToCacheKey } from "jsr:@soul/route-to-cache-key";
 
@@ -26,7 +40,7 @@ routeToCacheKey("/user/1234?active=true");  // Returns: "user_1234_active-true"
 routeToCacheKey("/search?q=deno&limit=10"); // Returns: "search_q-deno_limit-10"
 
 // Complex paths with multiple query parameters
-routeToCacheKey("/api/v2/products?category=electronics&sort=price&order=asc"); 
+routeToCacheKey("/api/v2/products?category=electronics&sort=price&order=asc");
 // Returns: "api_v2_products_category-electronics_sort-price_order-asc"
 ```
 
@@ -63,10 +77,3 @@ The function converts routes to cache keys by:
 
 MIT
 
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request
